@@ -82,7 +82,8 @@ ext.versions = [
         googleMap                    : '16.1.0',
         serviceLocation              : '17.0.0',
 
-        room                         : '2.2.5'
+        room                         : '2.2.5',
+        navigation                   : '2.3.0-alpha06'
 ]
 
 ext.libraries = [
@@ -175,5 +176,9 @@ ext.libraries = [
         annotationProcessorRoom         : "androidx.room:room-compiler:$versions.room",
         roomKtx                         : "androidx.room:room-ktx:$versions.room",
         roomTesting                     : "androidx.room:room-testing:$versions.room",
-        serviceLocation                 : "com.google.android.gms:play-services-location:$versions.serviceLocation"
+        serviceLocation                 : "com.google.android.gms:play-services-location:$versions.serviceLocation",
+
+        navigationFragment              : "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
+        navigationUi                    : "androidx.navigation:navigation-ui-ktx:$versions.navigation",
+        navigationTest                  : "androidx.navigation:navigation-testing:$versions.navigation"
 ]

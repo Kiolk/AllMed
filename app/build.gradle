@@ -156,4 +156,9 @@ dependencies {
     testImplementation libraries.junitExtention
     androidTestImplementation libraries.runner
     androidTestImplementation libraries.espresso
+
+    // Navigation
+    implementation libraries.navigationFragment
+    implementation libraries.navigationUi
+    implementation libraries.navigationTest
 }
