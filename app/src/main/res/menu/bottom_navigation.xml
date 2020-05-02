@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/doctor_fragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_doctor"
+        android:title="@string/doctor"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/tracker_fragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_helth_card"
+        android:title="@string/my_track"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/chat_fragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/consultation"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/setting_fragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom" />
+</menu>

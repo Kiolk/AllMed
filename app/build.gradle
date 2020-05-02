@@ -12,6 +12,8 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'io.fabric'
 
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -102,6 +104,7 @@ dependencies {
 
     implementation libraries.coreKtx
     implementation libraries.coreX
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     androidTestImplementation libraries.coreTestX
 
     implementation libraries.firebaseAnalytics
@@ -118,6 +121,7 @@ dependencies {
     implementation libraries.koinCore
     implementation libraries.koinAndroid
     implementation libraries.koinViewModel
+    implementation libraries.koinViewModelX
     testImplementation libraries.koinTest
     androidTestImplementation libraries.koinTest
 

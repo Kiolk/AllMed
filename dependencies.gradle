@@ -125,6 +125,7 @@ ext.libraries = [
         koinCore                        : "org.koin:koin-core:$versions.koin",
         koinAndroid                     : "org.koin:koin-android:$versions.koin",
         koinViewModel                   : "org.koin:koin-android-viewmodel:$versions.koin",
+        koinViewModelX                  : "org.koin:koin-androidx-viewmodel:$versions.koin",
         koinTest                        : "org.koin:koin-test:$versions.koin",
 
         retrofit                        : "com.squareup.retrofit2:retrofit:$versions.retrofit",
