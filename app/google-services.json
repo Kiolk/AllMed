@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "602064455575",
+    "firebase_url": "https://allmed-154d7.firebaseio.com",
+    "project_id": "allmed-154d7",
+    "storage_bucket": "allmed-154d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602064455575:android:ebdd3b981a0cf0f97b26d2",
+        "android_client_info": {
+          "package_name": "com.github.kiolk.allmed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602064455575-himg61lmlu8g1s704dsrtdlm9k6oirkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAECKDFiWDyMNKoQn5SJEUiZwN9NVT2DFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602064455575-himg61lmlu8g1s704dsrtdlm9k6oirkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602064455575:android:67f7042695d993537b26d2",
+        "android_client_info": {
+          "package_name": "com.github.kiolk.allmed.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602064455575-himg61lmlu8g1s704dsrtdlm9k6oirkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAECKDFiWDyMNKoQn5SJEUiZwN9NVT2DFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602064455575-himg61lmlu8g1s704dsrtdlm9k6oirkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
