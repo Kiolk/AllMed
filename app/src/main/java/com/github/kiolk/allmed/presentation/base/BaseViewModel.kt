@@ -2,8 +2,10 @@ package com.github.kiolk.allmed.presentation.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import com.github.kiolk.allmed.domain.model.Failure
 import com.github.kiolk.allmed.presentation.base.viewModel.ActionLiveData
 import com.github.kiolk.allmed.presentation.model.Event
+import timber.log.Timber
 
 abstract class BaseViewModel: ViewModel() {
 
@@ -17,5 +19,8 @@ abstract class BaseViewModel: ViewModel() {
 
     open fun onBackPressed() {
         _onNavigateBack.value = Event(Any())
+    }
+
+    protected fun onHandleError(failure: Failure) {
     }
 }

@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class Drug(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id_drug")
-    val id: Int,
+    val id: Int? = null,
     @ColumnInfo(name = "name")
     val name: String
 )

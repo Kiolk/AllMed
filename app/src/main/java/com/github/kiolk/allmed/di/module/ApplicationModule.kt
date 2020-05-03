@@ -16,6 +16,7 @@ val applicationModule = module {
         ).build()
     }
 
-//    single { get<AppDatabase>().excursionDao() }
-//    single { get<AppDatabase>().pointDao() }
+    single { get<AppDatabase>().drugDao() }
+    single { get<AppDatabase>().drugPatternDao() }
+    single { get<AppDatabase>().acceptanceDao() }
 }

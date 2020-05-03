@@ -1,4 +1,4 @@
-package com.github.kiolk.allmed.converter
+package com.github.kiolk.allmed.data.converter
 
 import androidx.room.TypeConverter
 import java.util.*

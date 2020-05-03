@@ -27,6 +27,10 @@ class AddDragFragment : BaseFragment<AddDragViewModel>(){
             viewModel.onBackPressed()
         }
 
+        btn_save_drug_pattern.setOnClickListener {
+            viewModel.saveDrugPattern(1)
+        }
+
         viewModel.onNavigateBack.observeEvent(viewLifecycleOwner){
             findNavController().popBackStack()
         }

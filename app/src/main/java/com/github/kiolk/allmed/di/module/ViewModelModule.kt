@@ -11,11 +11,11 @@ import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
-        viewModel { SplashViewModel() }
+        viewModel { SplashViewModel(get()) }
         viewModel { ChatViewModel() }
         viewModel { SettingsViewModel() }
         viewModel { TrackerViewModel() }
         viewModel { DoctorViewModel() }
-        viewModel { AddDragViewModel() }
-        viewModel { DayViewModel() }
+        viewModel { AddDragViewModel(get()) }
+        viewModel { DayViewModel(get()) }
 }
