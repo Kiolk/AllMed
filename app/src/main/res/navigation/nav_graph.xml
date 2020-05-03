@@ -18,7 +18,11 @@
         android:id="@+id/tracker_fragment"
         android:name="com.github.kiolk.allmed.presentation.screen.tracker.TrackerFragment"
         android:label="fragment_tracker"
-        tools:layout="@layout/fragment_tracker" />
+        tools:layout="@layout/fragment_tracker" >
+        <action
+            android:id="@+id/action_tracker_fragment_to_addDragFragment"
+            app:destination="@id/addDragFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/doctor_fragment"
@@ -37,4 +41,9 @@
         android:name="com.github.kiolk.allmed.presentation.screen.settings.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/addDragFragment"
+        android:name="com.github.kiolk.allmed.presentation.screen.adddrag.AddDragFragment"
+        android:label="fragment_add_drag"
+        tools:layout="@layout/fragment_add_drag" />
 </navigation>

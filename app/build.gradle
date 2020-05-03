@@ -91,6 +91,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -165,4 +169,6 @@ dependencies {
     implementation libraries.navigationFragment
     implementation libraries.navigationUi
     implementation libraries.navigationTest
+
+    implementation 'com.github.clans:fab:1.6.4'
 }

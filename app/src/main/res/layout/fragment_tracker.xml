@@ -1,14 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.screen.tracker.TrackerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Track" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:id="@+id/vg_week_navigator_layout"
+            fab:layout_constraintLeft_toLeftOf="parent"
+            fab:layout_constraintRight_toRightOf="parent"
+            fab:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_doctor"
+                android:layout_weight="1"
+                tools:ignore="ContentDescription"  />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="6"
+                android:text="12.04 - 19.04"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_doctor"
+                android:layout_weight="1"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_tracker_pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorAccent"
+            fab:layout_constraintLeft_toLeftOf="parent"
+            fab:layout_constraintRight_toRightOf="parent"
+            fab:layout_constraintBottom_toBottomOf="parent"
+            fab:layout_constraintTop_toBottomOf="@+id/vg_week_navigator_layout">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.viewpager.widget.ViewPager>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_add_drag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="60dp"
+            android:src="@drawable/ic_doctor"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorPrimary"
+            fab:fab_colorRipple="@color/design_default_color_primary" />
 </FrameLayout>
