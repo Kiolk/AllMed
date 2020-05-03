@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    app:mode="same_level"
+    app:dragEdge="right"
+    android:elevation="3dp"
+    android:layout_height="100dp"
+    app:minDistRequestDisallowParent="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:text="Пропустить"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="@android:color/white"
+            android:text="Принять"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_card"
+        android:elevation="3dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv_drug_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_doctor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_drug_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/iv_drug_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Paracetamol" />
+
+        <TextView
+            android:id="@+id/tv_acceptance_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/iv_drug_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_drug_name"
+            tools:text="12.00 - 13.00" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

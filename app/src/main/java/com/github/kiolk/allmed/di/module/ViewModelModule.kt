@@ -9,13 +9,14 @@ import com.github.kiolk.allmed.presentation.screen.tracker.TrackerViewModel
 import com.github.kiolk.allmed.presentation.screen.tracker.day.DayViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
+import java.util.*
 
 val viewModelModule = module {
-        viewModel { SplashViewModel(get()) }
-        viewModel { ChatViewModel() }
-        viewModel { SettingsViewModel() }
-        viewModel { TrackerViewModel() }
-        viewModel { DoctorViewModel() }
-        viewModel { AddDragViewModel(get()) }
-        viewModel { DayViewModel(get()) }
+    viewModel { SplashViewModel(get()) }
+    viewModel { ChatViewModel() }
+    viewModel { SettingsViewModel() }
+    viewModel { TrackerViewModel() }
+    viewModel { DoctorViewModel() }
+    viewModel { AddDragViewModel(get()) }
+    viewModel { (date: Date) -> DayViewModel(get(), date) }
 }

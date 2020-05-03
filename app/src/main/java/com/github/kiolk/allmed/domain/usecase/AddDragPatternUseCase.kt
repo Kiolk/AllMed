@@ -21,7 +21,7 @@ class AddDragPatternUseCase(
             val drug = dragRepository.getAllDrugs()[Random.nextInt(3)]
 
             val start = Date(1588511711000)
-            val end = Date(1588511711000 + (1000 * 60 * 60 * 24 * Random.nextInt(9)))
+            val end = Date(1588511711000 + (1000 * 60 * 60 * 24 * Random.nextInt(3)))
             val times = 3
             val interval = (4 * 1000 * 60 * 60).toLong()
             val dozen = Random.nextInt(3)

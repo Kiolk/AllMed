@@ -44,10 +44,11 @@
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 
-        <androidx.viewpager.widget.ViewPager
+        <com.github.kiolk.allmed.presentation.widget.NotSwipeViewPager
             android:id="@+id/vp_tracker_pager"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginBottom="?attr/actionBarSize"
             android:background="@color/colorAccent"
             fab:layout_constraintLeft_toLeftOf="parent"
             fab:layout_constraintRight_toRightOf="parent"
@@ -59,7 +60,7 @@
                 android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-        </androidx.viewpager.widget.ViewPager>
+        </com.github.kiolk.allmed.presentation.widget.NotSwipeViewPager>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
         <com.github.clans.fab.FloatingActionButton

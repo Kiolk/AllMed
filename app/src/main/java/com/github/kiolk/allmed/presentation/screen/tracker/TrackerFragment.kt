@@ -11,6 +11,7 @@ import com.github.kiolk.allmed.presentation.base.BaseFragment
 import com.github.kiolk.allmed.presentation.base.exstention.observeEvent
 import kotlinx.android.synthetic.main.fragment_tracker.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.*
 
 class TrackerFragment : BaseFragment<TrackerViewModel>() {
 
@@ -27,7 +28,7 @@ class TrackerFragment : BaseFragment<TrackerViewModel>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = TrackFragmentAdapter(requireContext(), requireFragmentManager())
+        adapter = TrackFragmentAdapter(requireContext(), requireFragmentManager(), Date())
         vp_tracker_pager.adapter = adapter
 
         fab_add_drag.setOnClickListener {
