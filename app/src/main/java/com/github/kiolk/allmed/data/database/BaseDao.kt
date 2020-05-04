@@ -9,7 +9,7 @@ interface BaseDao<T> {
     suspend fun save(items: List<T>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun save(item: T)
+    suspend fun save(item: T): Long
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun update(item: T)

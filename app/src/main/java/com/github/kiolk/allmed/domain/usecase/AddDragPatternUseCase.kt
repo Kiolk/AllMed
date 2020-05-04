@@ -1,13 +1,12 @@
 package com.github.kiolk.allmed.domain.usecase
 
-import com.github.kiolk.allmed.data.datasource.drug.DragRepository
 import com.github.kiolk.allmed.data.datasource.dragpattern.DrugPatternRepository
+import com.github.kiolk.allmed.data.datasource.drug.DragRepository
 import com.github.kiolk.allmed.data.exstentions.*
 import com.github.kiolk.allmed.data.model.Acceptance
 import com.github.kiolk.allmed.data.model.DrugPattern
 import com.github.kiolk.allmed.domain.model.Either
 import com.github.kiolk.allmed.domain.model.Failure
-import java.lang.Exception
 import java.util.*
 import kotlin.random.Random
 
@@ -35,9 +34,9 @@ class AddDragPatternUseCase(
                 dozen,
                 "ml"
             )
-            val acceptance = generateAcceptances(drag)
+            val id = drugPatternRepository.savePattern(drag)
+            val acceptance = generateAcceptances(drag, id)
 
-            drugPatternRepository.savePattern(drag)
             drugPatternRepository.saveAcceptance(acceptance)
             Either.Right(true)
         } catch (exception: Exception) {
@@ -45,7 +44,7 @@ class AddDragPatternUseCase(
         }
     }
 
-    private fun generateAcceptances(drugPattern: DrugPattern): List<Acceptance> {
+    private fun generateAcceptances(drugPattern: DrugPattern, drugPatternId: Long): List<Acceptance> {
         val startTime = drugPattern.start.startDay()
         val endTime = drugPattern.end.endDate()
         val diff = endTime - startTime
@@ -89,7 +88,7 @@ class AddDragPatternUseCase(
                 val day = order * ONE_DAY_MILLISECONDS
                 val acceptance = Acceptance(
                     null,
-                    drugPattern.id ?: 0,
+                    drugPatternId.toInt(),
                     drugPattern.drugId,
                     "",
                     Date(),

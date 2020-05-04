@@ -1,6 +1,7 @@
 package com.github.kiolk.allmed.data.converter
 
 import androidx.room.TypeConverter
+import com.github.kiolk.allmed.data.exstentions.ONE_DAY_MILLISECONDS
 import java.util.*
 
 class DateConverter {

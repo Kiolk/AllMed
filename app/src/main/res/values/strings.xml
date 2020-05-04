@@ -16,4 +16,5 @@
     <string name="friday">ПТ</string>
     <string name="saturday">СБ</string>
     <string name="sunday">ВС</string>
+    <string name="edit">Edit</string>
 </resources>

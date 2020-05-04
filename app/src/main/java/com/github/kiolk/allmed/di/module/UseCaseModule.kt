@@ -6,5 +6,5 @@ import org.koin.dsl.module
 
 val useCaseModule = module {
     factory { AddDragPatternUseCase(get(), get()) }
-    factory { GetAcceptanceUseCase(get()) }
+    factory { GetAcceptanceUseCase(get(), get()) }
 }

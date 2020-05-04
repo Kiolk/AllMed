@@ -2,7 +2,6 @@ package com.github.kiolk.allmed.presentation.screen.splash
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.github.kiolk.allmed.data.datasource.drug.DefaultDrugRepository
 import com.github.kiolk.allmed.data.datasource.drug.DragRepository
 import com.github.kiolk.allmed.data.model.Drug
 import com.github.kiolk.allmed.presentation.base.BaseViewModel
@@ -21,28 +20,41 @@ class SplashViewModel(private val drugRepository: DragRepository) : BaseViewMode
 
     override fun onFirstAttached() {
         viewModelScope.launch {
-            delay(3000)
-            _showTrackerScreenAction.value = Event(Any())
-        }
-
-        viewModelScope.launch {
             drugRepository.saveDrug(
                 listOf(
-                    Drug( null, "Ibufen ${Random().nextInt()}"),
-                    Drug( null, "Ibufen ${Random().nextInt()}"),
-                    Drug( null, "Ibufen ${Random().nextInt()}"),
-                    Drug( null, "Ibufen ${Random().nextInt()}"),
-                    Drug( null, "Ibufen ${Random().nextInt()}"),
-                    Drug( null, "Ibufen ${Random().nextInt()}")
+                    Drug(
+                        null,
+                        "Амоксиклав ${Random().nextInt()}",
+                        "https://lekopttorg.ru/upload/resizer2/2/07d/07d15714f190646e1b69a4aad982cf42.png"
+                    ),
+                    Drug(
+                        null,
+                        "Амоксиклав ${Random().nextInt()}",
+                        "https://lekopttorg.ru/upload/resizer2/2/07d/07d15714f190646e1b69a4aad982cf42.png"
+                    ),
+                    Drug(
+                        null,
+                        "Амоксиклав ${Random().nextInt()}",
+                        "https://lekopttorg.ru/upload/resizer2/2/07d/07d15714f190646e1b69a4aad982cf42.png"
+                    ),
+                    Drug(
+                        null,
+                        "Амоксиклав ${Random().nextInt()}",
+                        "https://lekopttorg.ru/upload/resizer2/2/07d/07d15714f190646e1b69a4aad982cf42.png"
+                    ),
+                    Drug(
+                        null,
+                        "Амоксиклав ${Random().nextInt()}",
+                        "https://lekopttorg.ru/upload/resizer2/2/07d/07d15714f190646e1b69a4aad982cf42.png"
+                    ),
+                    Drug(
+                        null,
+                        "Амоксиклав ${Random().nextInt()}",
+                        "https://lekopttorg.ru/upload/resizer2/2/07d/07d15714f190646e1b69a4aad982cf42.png"
+                    )
                 )
             )
-        }
-
-        viewModelScope.launch {
-            drugRepository.getAllDrugs().forEach {
-                Timber.d(it.toString())
-
-            }
+            _showTrackerScreenAction.value = Event(Any())
         }
     }
 }

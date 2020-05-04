@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_margin="5dp"
-    app:mode="same_level"
+    app:mode="normal"
     app:dragEdge="right"
     android:elevation="3dp"
     android:layout_height="100dp"
@@ -33,6 +32,7 @@
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vg_acceptance_card"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_margin="5dp"
@@ -64,5 +64,23 @@
             app:layout_constraintLeft_toRightOf="@+id/iv_drug_image"
             app:layout_constraintTop_toBottomOf="@+id/tv_drug_name"
             tools:text="12.00 - 13.00" />
+        <TextView
+            android:id="@+id/tv_dozen_drug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/iv_drug_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_acceptance_in"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_unit_drug"
+            app:layout_constraintTop_toTopOf="@+id/tv_dozen_drug"
+            app:layout_constraintLeft_toRightOf="@+id/tv_dozen_drug"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/iv_drug_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dozen_drug"
+            android:text="После еды"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.chauthai.swipereveallayout.SwipeRevealLayout>

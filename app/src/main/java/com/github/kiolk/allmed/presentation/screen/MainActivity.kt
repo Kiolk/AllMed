@@ -11,7 +11,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private var isFirst = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<BottomNavigationView>(R.id.bottom_navigation).setupWithNavController(
@@ -27,8 +30,18 @@ class MainActivity : AppCompatActivity() {
         ).addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.addDragFragment -> showBottomNavigation(false)
-                R.id.splash -> showBottomNavigation(false)
-                else  -> showBottomNavigation(true)
+                R.id.drugDetailsFragment -> showBottomNavigation(false)
+                R.id.splash -> {
+                    if(isFirst){
+                        showBottomNavigation(false)
+                    }else {
+                        onBackPressed()
+                    }
+                }
+                else  -> {
+                    showBottomNavigation(true)
+                    isFirst = false
+                }
             }
         }
     }

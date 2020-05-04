@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.screen.tracker.details.DrugDetailsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_add_drag"
+        android:layout_width="match_parent"
+        app:menu="@menu/drug_details_menu"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Прием"
+        android:gravity="center_horizontal"/>
+</FrameLayout>

@@ -10,5 +10,7 @@ data class Drug(
     @ColumnInfo(name = "id_drug")
     val id: Int? = null,
     @ColumnInfo(name = "name")
-    val name: String
+    val name: String,
+    @ColumnInfo(name = "image_url")
+    val image: String
 )

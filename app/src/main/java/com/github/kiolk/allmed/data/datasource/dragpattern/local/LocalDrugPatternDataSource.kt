@@ -5,6 +5,7 @@ import com.github.kiolk.allmed.data.exstentions.endDate
 import com.github.kiolk.allmed.data.exstentions.startDay
 import com.github.kiolk.allmed.data.model.Acceptance
 import com.github.kiolk.allmed.data.model.DrugPattern
+import com.github.kiolk.allmed.data.model.FullAcceptance
 import java.util.*
 
 class LocalDrugPatternDataSource(
@@ -18,5 +19,5 @@ class LocalDrugPatternDataSource(
 
     override suspend fun saveAcceptance(acceptances: List<Acceptance>) = acceptanceDao.save(acceptances)
 
-    override suspend fun getAcceptanceByDate(date: Date): List<Acceptance> = acceptanceDao.getAcceptancesForDate(date.startDay(), date.endDate())
+    override suspend fun getAcceptanceByDate(date: Date): List<FullAcceptance> = acceptanceDao.getAcceptancesForDate(date.startDay(), date.endDate())
 }

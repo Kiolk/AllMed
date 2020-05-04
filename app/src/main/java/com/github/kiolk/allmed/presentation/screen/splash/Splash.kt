@@ -22,6 +22,7 @@ class Splash : BaseFragment<SplashViewModel>() {
         viewModel.showTrackerScreenAction.observeEvent(viewLifecycleOwner) {
             this.findNavController().navigate(R.id.action_splash_to_trackerFragment)
             (activity as? MainActivity)?.findViewById<BottomNavigationView>(R.id.bottom_navigation)?.visibility = View.VISIBLE
+            activity?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
         }
     }
 

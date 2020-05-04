@@ -1,4 +1,4 @@
-package com.github.kiolk.allmed.presentation.screen.adddrag
+package com.github.kiolk.allmed.presentation.screen.tracker.adddrag
 
 import androidx.lifecycle.viewModelScope
 import com.github.kiolk.allmed.domain.usecase.AddDragPatternUseCase

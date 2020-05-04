@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_tracker_fragment_to_addDragFragment"
             app:destination="@id/addDragFragment" />
+        <action
+            android:id="@+id/action_tracker_fragment_to_drugDetailsFragment"
+            app:destination="@id/drugDetailsFragment" />
     </fragment>
 
     <fragment
@@ -43,7 +46,16 @@
         tools:layout="@layout/fragment_setting" />
     <fragment
         android:id="@+id/addDragFragment"
-        android:name="com.github.kiolk.allmed.presentation.screen.adddrag.AddDragFragment"
+        android:name="com.github.kiolk.allmed.presentation.screen.tracker.adddrag.AddDragFragment"
         android:label="fragment_add_drag"
         tools:layout="@layout/fragment_add_drag" />
+    <fragment
+        android:id="@+id/drugDetailsFragment"
+        android:name="com.github.kiolk.allmed.presentation.screen.tracker.details.DrugDetailsFragment"
+        android:label="fragment_drug_details"
+        tools:layout="@layout/fragment_drug_details" >
+        <action
+            android:id="@+id/action_drugDetailsFragment_to_addDragFragment"
+            app:destination="@id/addDragFragment" />
+    </fragment>
 </navigation>

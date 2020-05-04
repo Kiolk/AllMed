@@ -2,6 +2,7 @@ package com.github.kiolk.allmed.data.datasource.dragpattern
 
 import com.github.kiolk.allmed.data.model.Acceptance
 import com.github.kiolk.allmed.data.model.DrugPattern
+import com.github.kiolk.allmed.data.model.FullAcceptance
 import java.util.*
 
 class DefaultDrugPatternRepository(private val local: DrugPatternDataSource): DrugPatternRepository {
@@ -12,5 +13,5 @@ class DefaultDrugPatternRepository(private val local: DrugPatternDataSource): Dr
 
     override suspend fun saveAcceptance(acceptances: List<Acceptance>) = local.saveAcceptance(acceptances)
 
-    override suspend fun getAcceptanceByDate(date: Date): List<Acceptance> = local.getAcceptanceByDate(date)
+    override suspend fun getAcceptanceByDate(date: Date): List<FullAcceptance> = local.getAcceptanceByDate(date)
 }
