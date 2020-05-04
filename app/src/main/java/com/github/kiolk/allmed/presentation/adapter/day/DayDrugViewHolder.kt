@@ -18,11 +18,7 @@ class DayDrugViewHolder(itemView: View): BaseViewHolder<FullAcceptance>(itemView
         Glide.with(itemView).load(item.drug?.image).into(itemView.iv_drug_image)
         itemView.tv_dozen_drug.text = item.pattern?.doze.toString()
         itemView.tv_unit_drug.text = item.pattern?.doze_unit
-        when(itemViewType){
-            2 -> itemView.vg_acceptance_card.background = itemView.context.getDrawable(R.drawable.bg_card)
-            1 -> itemView.vg_acceptance_card.background = itemView.context.getDrawable(R.drawable.bg_card_missed)
-            0 -> itemView.vg_acceptance_card.background = itemView.context.getDrawable(R.drawable.bg_card_accepted)
-        }
+        itemView.vg_acceptance_card.background = itemView.context.getDrawable(R.drawable.bg_card)
         itemView.vg_acceptance_card.setOnClickListener {
             callBack?.invoke(item)
         }

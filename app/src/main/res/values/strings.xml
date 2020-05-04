@@ -17,4 +17,6 @@
     <string name="saturday">СБ</string>
     <string name="sunday">ВС</string>
     <string name="edit">Edit</string>
+    <string name="time_table_drugs">Расписание\n лекарств</string>
+    <string name="diagnostic">Обследования</string>
 </resources>

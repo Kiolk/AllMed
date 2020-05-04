@@ -30,6 +30,7 @@ class TrackerFragment : BaseFragment<TrackerViewModel>() {
         super.onViewCreated(view, savedInstanceState)
         adapter = TrackFragmentAdapter(requireContext(), childFragmentManager, Date())
         vp_tracker_pager.adapter = adapter
+        tab_layout.setupWithViewPager(vp_tracker_pager)
 
         fab_add_drag.setOnClickListener {
             viewModel.onAddDragClicked()

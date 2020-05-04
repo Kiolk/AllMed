@@ -3,11 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    app:mode="normal"
-    app:dragEdge="right"
-    android:elevation="3dp"
     android:layout_height="100dp"
-    app:minDistRequestDisallowParent="10dp">
+    android:layout_margin="3dp"
+    android:background="@drawable/bg_red_cornered"
+    app:dragEdge="right"
+    app:minDistRequestDisallowParent="10dp"
+    app:mode="normal">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -17,33 +18,34 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="-5dp"
+            android:background="@drawable/bg_card_missed"
             android:gravity="center"
-            android:background="@android:color/holo_green_dark"
-            android:textColor="@android:color/white"
-            android:text="Пропустить"/>
+            android:text="Пропустить"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            android:background="@drawable/bg_card_accepted"
             android:gravity="center"
-            android:background="@android:color/holo_blue_light"
-            android:textColor="@android:color/white"
-            android:text="Принять"/>
+            android:text="Принять"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/vg_acceptance_card"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:background="@drawable/bg_card"
-        android:elevation="3dp"
-        android:padding="5dp">
+        android:background="@color/light_red">
 
         <ImageView
             android:id="@+id/iv_drug_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/ic_doctor"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -53,6 +55,10 @@
             android:id="@+id/tv_drug_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/general_text_color"
             app:layout_constraintLeft_toRightOf="@+id/iv_drug_image"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Paracetamol" />
@@ -61,26 +67,43 @@
             android:id="@+id/tv_acceptance_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_time_icon"
+            android:textColor="@color/super_light_gray"
+            android:textSize="12sp"
             app:layout_constraintLeft_toRightOf="@+id/iv_drug_image"
             app:layout_constraintTop_toBottomOf="@+id/tv_drug_name"
             tools:text="12.00 - 13.00" />
+
         <TextView
             android:id="@+id/tv_dozen_drug"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toRightOf="@+id/iv_drug_image"
-            app:layout_constraintTop_toBottomOf="@+id/tv_acceptance_in"/>
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_drug_name"
+            app:layout_constraintLeft_toRightOf="@+id/tv_drug_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_drug_name"
+            tools:text="1" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/tv_unit_drug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            app:layout_constraintLeft_toRightOf="@+id/tv_dozen_drug"
             app:layout_constraintTop_toTopOf="@+id/tv_dozen_drug"
-            app:layout_constraintLeft_toRightOf="@+id/tv_dozen_drug"/>
+            tools:text="ml" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toRightOf="@+id/iv_drug_image"
-            app:layout_constraintTop_toBottomOf="@+id/tv_dozen_drug"
-            android:text="После еды"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="После еды"
+            android:textColor="@color/gray"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_drug_image"
+            app:layout_constraintLeft_toRightOf="@+id/iv_drug_image" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.chauthai.swipereveallayout.SwipeRevealLayout>

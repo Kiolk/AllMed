@@ -55,6 +55,10 @@ class DayFragment : BaseFragment<DayViewModel>() {
             adapter.addALl(it)
         }
 
+        viewModel.selectDate.observeNotNull(viewLifecycleOwner){
+            tv_day_track.text = it
+        }
+
         viewModel.openDrugPatternDetails.observeEvent(viewLifecycleOwner) {
             findNavController().navigate(
                 R.id.action_tracker_fragment_to_drugDetailsFragment,

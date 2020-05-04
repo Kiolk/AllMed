@@ -172,4 +172,5 @@ dependencies {
 
     implementation 'com.github.clans:fab:1.6.4'
     implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

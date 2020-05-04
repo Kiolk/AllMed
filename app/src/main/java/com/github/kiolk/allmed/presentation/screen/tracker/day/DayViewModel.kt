@@ -3,6 +3,8 @@ package com.github.kiolk.allmed.presentation.screen.tracker.day
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.github.kiolk.allmed.data.exstentions.toDDMMYYYY
+import com.github.kiolk.allmed.data.exstentions.toDayTime
 import com.github.kiolk.allmed.data.model.Acceptance
 import com.github.kiolk.allmed.data.model.FullAcceptance
 import com.github.kiolk.allmed.domain.usecase.GetAcceptanceUseCase
@@ -18,15 +20,19 @@ class DayViewModel(
 ) : BaseViewModel() {
 
     private val _data: MutableLiveData<List<FullAcceptance>> = MutableLiveData()
-    private val _openDrugPatternDetails: ActionLiveData<Event<Int>> = ActionLiveData<Event<Int>>()
+    private val _openDrugPatternDetails: ActionLiveData<Event<Int>> = ActionLiveData()
+    private val _date: MutableLiveData<String> = MutableLiveData()
 
     val data: LiveData<List<FullAcceptance>> = _data
     val openDrugPatternDetails: LiveData<Event<Int>> = _openDrugPatternDetails
+    val selectDate: LiveData<String> =_date
 
     override fun onFirstAttached() {
         getAcceptanceUseCase.invoke(viewModelScope, GetAcceptanceUseCase.Params(date)) {
             it.either(::onHandleError, ::onSuccessFetchAcceptances)
         }
+
+        _date.value = date.toDDMMYYYY()
     }
 
     private fun onSuccessFetchAcceptances(acceptances: List<FullAcceptance>) {

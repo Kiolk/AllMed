@@ -4,8 +4,18 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
+    <color name="black">#2D2D2D</color>
+    <color name="pale_gray">#F6F6F6</color>
+    <color name="green">#54CBCE</color>
+    <color name="gray">#999999</color>
+    <color name="super_light_gray">#D8D8D8</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="general_text_color">#2D2D2D</color>
+
+
     <color name="base_green">#80D6D8</color>
     <color name="light_gray">#CCCCCC</color>
     <color name="light_green">#90BC8E</color>
-    <color name="light_red">#F5FFC1D0</color>
+    <color name="light_red">#F1A1B6</color>
 </resources>

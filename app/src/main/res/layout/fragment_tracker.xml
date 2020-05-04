@@ -11,56 +11,82 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/vg_week_navigator_layout"
+            android:id="@+id/vg_top_bar_tracker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_with_shadow"
+            android:orientation="vertical"
             fab:layout_constraintLeft_toLeftOf="parent"
             fab:layout_constraintRight_toRightOf="parent"
-            fab:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:orientation="horizontal">
+            fab:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:layout_margin="5dp"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_doctor"
-                android:layout_weight="1"
-                tools:ignore="ContentDescription"  />
+            <LinearLayout
+                android:id="@+id/vg_week_navigator_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                fab:layout_constraintLeft_toLeftOf="parent"
+                fab:layout_constraintRight_toRightOf="parent"
+                fab:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="6"
-                android:text="12.04 - 19.04"
-                android:gravity="center"
-                android:textSize="20sp"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_left"
+                    tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:layout_margin="5dp"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_doctor"
-                android:layout_weight="1"
-                tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="12.04 - 19.04"
+                    android:textColor="@color/general_text_color"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_right"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                fab:layout_constraintLeft_toLeftOf="parent"
+                fab:layout_constraintRight_toRightOf="parent"
+                fab:layout_constraintTop_toBottomOf="@+id/vg_week_navigator_layout" />
         </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/vg_header_acceptance"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:background="@color/pale_gray"-->
+<!--            android:orientation="vertical"-->
+<!--            fab:layout_constraintLeft_toLeftOf="parent"-->
+<!--            fab:layout_constraintRight_toRightOf="parent"-->
+<!--            fab:layout_constraintTop_toBottomOf="@+id/vg_top_bar_tracker" />-->
 
         <com.github.kiolk.allmed.presentation.widget.NotSwipeViewPager
             android:id="@+id/vp_tracker_pager"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="?attr/actionBarSize"
-            android:background="@color/colorAccent"
+            android:background="@color/pale_gray"
+            fab:layout_constraintBottom_toBottomOf="parent"
             fab:layout_constraintLeft_toLeftOf="parent"
             fab:layout_constraintRight_toRightOf="parent"
-            fab:layout_constraintBottom_toBottomOf="parent"
-            fab:layout_constraintTop_toBottomOf="@+id/vg_week_navigator_layout">
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout"
-                android:background="@color/colorPrimary"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.github.kiolk.allmed.presentation.widget.NotSwipeViewPager>
+            fab:layout_constraintTop_toBottomOf="@+id/vg_top_bar_tracker" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -68,82 +94,83 @@
         android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|right"
         android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="60dp"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="@color/gray"
+        fab:menu_colorPressed="@color/light_gray"
+        fab:menu_colorRipple="#99FFFFFF"
         fab:menu_fab_size="normal"
-        fab:menu_showShadow="true"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_colorNormal="#333333"
+        fab:menu_labels_colorPressed="#444444"
+        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_paddingBottom="4dp"
+        fab:menu_labels_paddingLeft="8dp"
+        fab:menu_labels_paddingRight="8dp"
+        fab:menu_labels_paddingTop="4dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#FFFFFF"
+        fab:menu_labels_textSize="14sp"
+        fab:menu_openDirection="up"
         fab:menu_shadowColor="#66000000"
         fab:menu_shadowRadius="4dp"
         fab:menu_shadowXOffset="1dp"
         fab:menu_shadowYOffset="3dp"
-        fab:menu_colorNormal="#DA4336"
-        fab:menu_colorPressed="#E75043"
-        fab:menu_colorRipple="#99FFFFFF"
-        fab:menu_animationDelayPerItem="50"
-        fab:menu_icon="@drawable/fab_add"
-        fab:menu_buttonSpacing="0dp"
-        fab:menu_labels_margin="0dp"
-        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
-        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
-        fab:menu_labels_paddingTop="4dp"
-        fab:menu_labels_paddingRight="8dp"
-        fab:menu_labels_paddingBottom="4dp"
-        fab:menu_labels_paddingLeft="8dp"
-        fab:menu_labels_padding="8dp"
-        fab:menu_labels_textColor="#FFFFFF"
-        fab:menu_labels_textSize="14sp"
-        fab:menu_labels_cornerRadius="3dp"
-        fab:menu_labels_colorNormal="#333333"
-        fab:menu_labels_colorPressed="#444444"
-        fab:menu_labels_colorRipple="#66FFFFFF"
-        fab:menu_labels_showShadow="true"
-        fab:menu_labels_singleLine="false"
-        fab:menu_labels_ellipsize="none"
-        fab:menu_labels_maxLines="-1"
-        fab:menu_labels_position="left"
-        fab:menu_openDirection="up"
-        android:layout_gravity="bottom|right"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="60dp"
-        fab:menu_backgroundColor="@android:color/transparent">
+        fab:menu_showShadow="true">
+
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab_add_drag"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            fab:menu_fab_label="Добавить"
             android:layout_gravity="bottom|right"
             android:src="@drawable/ic_doctor"
-            fab:fab_size="mini"
-            fab:fab_label="Добавить"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorPrimary"
-            fab:fab_colorRipple="@color/design_default_color_primary" />
+            fab:fab_colorRipple="@color/design_default_color_primary"
+            fab:fab_label="Добавить"
+            fab:fab_size="mini"
+            fab:menu_fab_label="Добавить" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab_accept_all_drag"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            fab:menu_fab_label="Добавить"
-            fab:fab_size="mini"
-            android:src="@drawable/ic_chat"
-            fab:fab_label="Принять все"
             android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_chat"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorPrimary"
-            fab:fab_colorRipple="@color/design_default_color_primary" />
+            fab:fab_colorRipple="@color/design_default_color_primary"
+            fab:fab_label="Принять все"
+            fab:fab_size="mini"
+            fab:menu_fab_label="Добавить" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab_miss_all_drag"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            fab:menu_fab_label="Добавить"
-            fab:fab_size="mini"
-            android:src="@drawable/ic_settings"
-            fab:fab_label="Пропустить все"
             android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_settings"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorPrimary"
-            fab:fab_colorRipple="@color/design_default_color_primary" />
+            fab:fab_colorRipple="@color/design_default_color_primary"
+            fab:fab_label="Пропустить все"
+            fab:fab_size="mini"
+            fab:menu_fab_label="Добавить" />
     </com.github.clans.fab.FloatingActionMenu>
 </FrameLayout>
