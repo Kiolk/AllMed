@@ -38,6 +38,11 @@ class DayFragment : BaseFragment<DayViewModel>() {
         return inflater.inflate(R.layout.fragment_day, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.onFirstAttached()
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         adapter = DayDrugAdapter() {
             viewModel.onAcceptanceClicked(it.acceptance)

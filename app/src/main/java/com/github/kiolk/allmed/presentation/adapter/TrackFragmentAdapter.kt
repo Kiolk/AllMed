@@ -3,6 +3,7 @@ package com.github.kiolk.allmed.presentation.adapter
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.github.kiolk.allmed.data.exstentions.ONE_DAY_MILLISECONDS
 import com.github.kiolk.allmed.presentation.enums.DayOfWeek

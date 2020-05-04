@@ -28,11 +28,19 @@ class TrackerFragment : BaseFragment<TrackerViewModel>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = TrackFragmentAdapter(requireContext(), requireFragmentManager(), Date())
+        adapter = TrackFragmentAdapter(requireContext(), childFragmentManager, Date())
         vp_tracker_pager.adapter = adapter
 
         fab_add_drag.setOnClickListener {
             viewModel.onAddDragClicked()
+        }
+
+        fab_accept_all_drag.setOnClickListener {
+            stubDialog()
+        }
+
+        fab_miss_all_drag.setOnClickListener {
+            stubDialog()
         }
 
         viewModel.addDragAction.observeEvent(viewLifecycleOwner){
