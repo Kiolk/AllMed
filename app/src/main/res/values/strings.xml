@@ -19,4 +19,12 @@
     <string name="edit">Edit</string>
     <string name="time_table_drugs">Расписание\n лекарств</string>
     <string name="diagnostic">Обследования</string>
+    <string name="select_symptoms">Выберите симптомы\nкоторые вас беспокоят</string>
+    <string name="search_by_symptoms">Поиск по симптомам</string>
+    <string name="key_symptoms">Ключевые симптомы</string>
+    <string name="cough">Кашель</string>
+    <string name="score_throat">Боль в горле</string>
+    <string name="nausea">Тошнота</string>
+    <string name="skip">Пропустить</string>
+
 </resources>
