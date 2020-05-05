@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/diagnosticFragment"
-        android:name="com.github.kiolk.allmed.DiagnosticFragment"
+        android:name="com.github.kiolk.allmed.presentation.screen.diagnostic.DiagnosticFragment"
         android:label="fragment_diagnostic"
         tools:layout="@layout/fragment_diagnostic" />
 </navigation>

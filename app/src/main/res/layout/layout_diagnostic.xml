@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="3dp"
+    android:layout_margin="3dp"
+    android:paddingBottom="15dp"
+    android:background="@drawable/bg_white_rounded">
+
+    <TextView
+        android:id="@+id/tv_diagnostic_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        android:textColor="@color/general_text_color"
+        android:textStyle="bold"
+        tools:text="Повторный прием врача терапевта"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_diagnostic_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_diagnostic_name"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/light_gray"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_time_icon"
+        tools:text="sdjsdsd"/>
+
+    <TextView
+        android:id="@+id/tv_diagnostic_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/tv_diagnostic_date"
+        app:layout_constraintTop_toTopOf="@+id/tv_diagnostic_date"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_diagnostic_date"
+        android:textColor="@color/green"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        tools:text="dfskldflsdkfj"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

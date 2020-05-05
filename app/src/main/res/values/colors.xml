@@ -15,6 +15,9 @@
 
 
     <color name="base_green">#80D6D8</color>
+    <color name="dark_green">#48C811</color>
+    <color name="base_yellow">#ECD22E</color>
+    <color name="base_red">#DC0928</color>
     <color name="light_gray">#CCCCCC</color>
     <color name="light_green">#90BC8E</color>
     <color name="light_red">#F1A1B6</color>
