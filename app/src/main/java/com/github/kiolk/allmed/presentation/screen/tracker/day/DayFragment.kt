@@ -54,7 +54,7 @@ class DayFragment : BaseFragment<DayViewModel>() {
         }
 
         viewModel.data.observeNotNull(viewLifecycleOwner) {
-            adapter.addALl(it)
+            adapter.addALl(it.sortedBy { it.acceptance.start })
         }
 
         viewModel.selectDate.observeNotNull(viewLifecycleOwner){

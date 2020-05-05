@@ -17,18 +17,18 @@ class AddDragPatternUseCase(
 
     override suspend fun run(param: Params): Either<Failure, Boolean> {
         return try {
-            val drug = dragRepository.getAllDrugs()[Random.nextInt(3)]
+            val drug = dragRepository.getAllDrugs()[Random.nextInt(2)]
 
             val start = Date(1588511711000)
             val end = Date(1588511711000 + (1000 * 60 * 60 * 24 * Random.nextInt(3)))
-            val times = 3
+            val times = Random.nextInt(3) + 1
             val interval = (4 * 1000 * 60 * 60).toLong()
-            val dozen = Random.nextInt(3)
+            val dozen = Random.nextInt(3) + 1
             val drag = DrugPattern(
                 null,
                 start,
                 end,
-                drug.id ?: 0,
+                count,
                 times,
                 interval,
                 dozen,
@@ -38,6 +38,14 @@ class AddDragPatternUseCase(
             val acceptance = generateAcceptances(drag, id)
 
             drugPatternRepository.saveAcceptance(acceptance)
+
+            //TODO stub
+            if(count < 2){
+                ++count
+            }else {
+                count = 0
+            }
+
             Either.Right(true)
         } catch (exception: Exception) {
             Either.Left(onWrapException(exception))
@@ -99,6 +107,10 @@ class AddDragPatternUseCase(
             }
         }
         return result
+    }
+
+    companion object {
+        var count = 0
     }
 
     data class Params(val name: String, val start: Date, val end: Date)

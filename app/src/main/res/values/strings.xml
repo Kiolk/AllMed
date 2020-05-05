@@ -3,10 +3,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="settings">Settings</string>
-    <string name="consultation">consultation</string>
-    <string name="my_track">My track</string>
-    <string name="doctor">Doctor</string>
+    <string name="settings">Настройки</string>
+    <string name="consultation">Чат</string>
+    <string name="my_track">Прием</string>
+    <string name="doctor">К врачу</string>
 
     <!-- Day of Week -->
     <string name="monday">ПН</string>
@@ -23,8 +23,12 @@
     <string name="search_by_symptoms">Поиск по симптомам</string>
     <string name="key_symptoms">Ключевые симптомы</string>
     <string name="cough">Кашель</string>
+    <string name="runny">Насморк</string>
     <string name="score_throat">Боль в горле</string>
     <string name="nausea">Тошнота</string>
+    <string name="temperature">Температура</string>
+    <string name="sik_head">Головная боль</string>
+    <string name="photophobia">Светобоязнь</string>
     <string name="skip">Пропустить</string>
     <string name="chat">Чат</string>
     <string name="today">Сегодня</string>
@@ -40,5 +44,4 @@
     <string name="scheduled">Запланированные</string>
     <string name="completed">Завершенные</string>
     <string name="canceled">Отмененные</string>
-
 </resources>

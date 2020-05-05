@@ -1,6 +1,7 @@
 package com.github.kiolk.allmed.presentation.adapter.doctor
 
 import com.github.kiolk.allmed.data.exstentions.ONE_DAY_MILLISECONDS
+import com.github.kiolk.allmed.data.model.Drug
 import com.github.kiolk.allmed.presentation.enums.Status
 import com.github.kiolk.allmed.presentation.model.Diagnostic
 import com.github.kiolk.allmed.presentation.model.Doctor
@@ -36,3 +37,9 @@ val scheduledDiagnostic = listOf(
 val canceled = listOf(
     Diagnostic("Прием врача терапевта", Date(System.currentTimeMillis() - ONE_DAY_MILLISECONDS * 9), Status.CANCELED)
 )
+
+val amoksiklav = Drug(null, "Амоксиклав","https://lekopttorg.ru/upload/resizer2/2/07d/07d15714f190646e1b69a4aad982cf42.png")
+
+val analgin = Drug(null, "Анальгин", "https://medicinesdelivery.com/image/cache/data/products/Analginrektsup-600x600.jpg")
+
+val boyaryshnik = Drug(null, "Настойка боярышника", "https://www.pvlida.by/media/k2/items/cache/55097f9559083383e45911635c552374_XL.jpg")
