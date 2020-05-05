@@ -9,6 +9,7 @@ const val END_DAY_UNTIL: Long = 22 * 60 * 60 * 1000
 
 val dateFormatter = SimpleDateFormat("HH:mm", Locale.ENGLISH)
 val dayMonthYearFormatter = SimpleDateFormat("d MMM, YYYY", Locale.ENGLISH)
+val chatTimeFormatter = SimpleDateFormat("HH:mm d MMM, YYYY", Locale.ENGLISH)
 
 fun Date.startDay(): Long {
     return (this.time / ONE_DAY_MILLISECONDS) * ONE_DAY_MILLISECONDS
@@ -21,3 +22,4 @@ fun Date.endDate(): Long {
 fun Date.toDayTime(): String = dateFormatter.format(this)
 
 fun Date.toDDMMYYYY(): String = dayMonthYearFormatter.format(this)
+fun Date.toHHMMDDMMYYYY(): String = chatTimeFormatter.format(this)

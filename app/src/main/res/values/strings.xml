@@ -26,5 +26,7 @@
     <string name="score_throat">Боль в горле</string>
     <string name="nausea">Тошнота</string>
     <string name="skip">Пропустить</string>
+    <string name="chat">Чат</string>
+    <string name="today">Сегодня</string>
 
 </resources>

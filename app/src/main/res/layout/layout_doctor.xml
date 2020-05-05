@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_white_rounded"
+    android:elevation="3dp"
+    android:layout_margin="3dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_doctor_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="13dp"
+        android:src="@drawable/ic_doctor"
+        app:civ_border_color="@color/super_light_gray"
+        app:civ_border_width="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_status_indicator"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_indicator"
+        app:layout_constraintRight_toRightOf="@+id/iv_doctor_image"
+        app:layout_constraintTop_toTopOf="@+id/iv_doctor_image"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_doctor_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/general_text_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@+id/iv_doctor_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_doctor_image"
+        tools:text="Крутых Александр Анатольевич" />
+
+    <TextView
+        android:id="@+id/tv_chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:drawableStart="@drawable/ic_time_icon"
+        android:textColor="@color/super_light_gray"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@+id/iv_doctor_image"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doctor_position"
+        tools:text="12.00 - 13.00" />
+
+    <TextView
+        android:id="@+id/tv_doctor_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@+id/iv_doctor_image"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doctor_name"
+        tools:text="Врач терапевт" />
+
+    <TextView
+        android:id="@+id/tv_doctor_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/iv_doctor_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_doctor_image"
+        tools:text="dslkfjsdfklgskjdgsdklgfsdkfksdlfmksdslksdfsd skldnfsdklf nsdfn skldfn ds sndflk" />
+</androidx.constraintlayout.widget.ConstraintLayout>
