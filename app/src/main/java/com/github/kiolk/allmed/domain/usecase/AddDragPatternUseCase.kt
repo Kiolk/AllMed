@@ -17,7 +17,7 @@ class AddDragPatternUseCase(
 
     override suspend fun run(param: Params): Either<Failure, Boolean> {
         return try {
-            val drug = dragRepository.getAllDrugs()[Random.nextInt(2)]
+            val drug = dragRepository.getAllDrugs()[Random.nextInt(3)]
 
             val start = Date(1588511711000)
             val end = Date(1588511711000 + (1000 * 60 * 60 * 24 * Random.nextInt(3)))
@@ -28,7 +28,7 @@ class AddDragPatternUseCase(
                 null,
                 start,
                 end,
-                count,
+                drug.id ?: 0,
                 times,
                 interval,
                 dozen,

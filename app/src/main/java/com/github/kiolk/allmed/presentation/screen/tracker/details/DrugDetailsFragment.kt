@@ -32,7 +32,7 @@ class DrugDetailsFragment : BaseFragment<DrugDetailsViewModel>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tb_add_drag.setNavigationOnClickListener {
+        btn_acceptance_details_back.setOnClickListener {
             viewModel.onBackPressed()
         }
 

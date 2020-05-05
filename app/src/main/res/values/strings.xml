@@ -44,4 +44,5 @@
     <string name="scheduled">Запланированные</string>
     <string name="completed">Завершенные</string>
     <string name="canceled">Отмененные</string>
+    <string name="acceptance_road_map">График приема</string>
 </resources>
