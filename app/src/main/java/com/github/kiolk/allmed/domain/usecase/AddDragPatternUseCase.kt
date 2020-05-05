@@ -57,7 +57,7 @@ class AddDragPatternUseCase(
         val dayPattern: MutableList<Triple<Long, Long, Long>> = mutableListOf()
         var nextStartAcceptanceTime = START_DAY_SINCE
         for (time in 0..drugPattern.times) {
-            var nextEndAcceptanceTime = 0L
+            var nextEndAcceptanceTime: Long
             if (rangeForAccept > 0) {
                 nextEndAcceptanceTime = nextStartAcceptanceTime + rangeForAccept
                 dayPattern.add(
@@ -101,5 +101,5 @@ class AddDragPatternUseCase(
         return result
     }
 
-    class Params
+    data class Params(val name: String, val start: Date, val end: Date)
 }
