@@ -33,6 +33,7 @@
         tools:text="6 мая, 2020" />
 
     <com.github.kiolk.allmed.presentation.widget.VerticalTextView
+        android:id="@+id/btn_diagnostic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_right_side_button"

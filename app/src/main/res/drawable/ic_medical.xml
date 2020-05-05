@@ -20,10 +20,10 @@
       android:pathData="M12,4L12,10"
       android:strokeWidth="2"
       android:fillColor="#00000000"
-      android:strokeColor="#fff"/>
+      android:strokeColor="#FFFFFF"/>
   <path
       android:pathData="M15,7L9,7"
       android:strokeWidth="2"
       android:fillColor="#00000000"
-      android:strokeColor="#fff"/>
+      android:strokeColor="#FFFFFF"/>
 </vector>

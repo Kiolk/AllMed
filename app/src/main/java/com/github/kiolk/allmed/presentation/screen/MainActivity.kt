@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.addDragFragment -> showBottomNavigation(false)
                 R.id.drugDetailsFragment -> showBottomNavigation(false)
+                R.id.diagnosticFragment -> showBottomNavigation(false)
                 R.id.splash -> {
                     if(isFirst){
                         showBottomNavigation(false)

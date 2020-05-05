@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.kiolk.allmed.R
@@ -12,7 +11,6 @@ import com.github.kiolk.allmed.presentation.adapter.day.DayDrugAdapter
 import com.github.kiolk.allmed.presentation.base.BaseFragment
 import com.github.kiolk.allmed.presentation.base.exstention.observeEvent
 import com.github.kiolk.allmed.presentation.base.exstention.observeNotNull
-import com.github.kiolk.allmed.presentation.enums.DayOfWeek
 import kotlinx.android.synthetic.main.fragment_day.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -50,6 +48,10 @@ class DayFragment : BaseFragment<DayViewModel>() {
         rv_day_drug_list.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         rv_day_drug_list.adapter = adapter
+
+        btn_diagnostic.setOnClickListener {
+            findNavController().navigate(R.id.action_tracker_fragment_to_diagnosticFragment)
+        }
 
         viewModel.data.observeNotNull(viewLifecycleOwner) {
             adapter.addALl(it)

@@ -44,9 +44,10 @@
                     android:layout_weight="6"
                     android:fontFamily="@font/montserrat"
                     android:gravity="center"
-                    android:text="12.04 - 19.04"
+                    android:text="04.05 - 11.05"
                     android:textColor="@color/general_text_color"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -67,16 +68,6 @@
                 fab:layout_constraintTop_toBottomOf="@+id/vg_week_navigator_layout" />
         </LinearLayout>
 
-<!--        <LinearLayout-->
-<!--            android:id="@+id/vg_header_acceptance"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="150dp"-->
-<!--            android:background="@color/pale_gray"-->
-<!--            android:orientation="vertical"-->
-<!--            fab:layout_constraintLeft_toLeftOf="parent"-->
-<!--            fab:layout_constraintRight_toRightOf="parent"-->
-<!--            fab:layout_constraintTop_toBottomOf="@+id/vg_top_bar_tracker" />-->
-
         <com.github.kiolk.allmed.presentation.widget.NotSwipeViewPager
             android:id="@+id/vp_tracker_pager"
             android:layout_width="0dp"
@@ -94,11 +85,9 @@
         android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom|right"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="60dp"
         fab:menu_animationDelayPerItem="50"
         fab:menu_backgroundColor="@android:color/transparent"
@@ -132,14 +121,15 @@
         fab:menu_shadowRadius="4dp"
         fab:menu_shadowXOffset="1dp"
         fab:menu_shadowYOffset="3dp"
-        fab:menu_showShadow="true">
+        fab:menu_showShadow="true"
+        tools:ignore="RtlHardcoded">
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab_add_drag"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="bottom|right"
-            android:src="@drawable/ic_doctor"
+            android:src="@drawable/ic_add"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorPrimary"
             fab:fab_colorRipple="@color/design_default_color_primary"
@@ -152,7 +142,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="bottom|right"
-            android:src="@drawable/ic_chat"
+            android:src="@drawable/ic_signs"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorPrimary"
             fab:fab_colorRipple="@color/design_default_color_primary"
@@ -165,7 +155,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="bottom|right"
-            android:src="@drawable/ic_settings"
+            android:src="@drawable/ic_minus_button"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorPrimary"
             fab:fab_colorRipple="@color/design_default_color_primary"
