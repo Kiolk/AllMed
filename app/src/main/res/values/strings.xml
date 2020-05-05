@@ -28,5 +28,6 @@
     <string name="skip">Пропустить</string>
     <string name="chat">Чат</string>
     <string name="today">Сегодня</string>
+    <string name="settings_label">Настройки</string>
 
 </resources>
